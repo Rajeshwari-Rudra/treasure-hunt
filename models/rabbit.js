@@ -22,7 +22,7 @@ module.exports = (db, DataTypes) => {
       unique: true,
       required: true,
       allowNull: false,
-      defaultValue: 'Rabbit',
+      defaultValue: 'Enter Name',
       validate: {
         is: {
           args: /^[A-Za-z]+$/i, // matches a RegExp
@@ -48,7 +48,7 @@ module.exports = (db, DataTypes) => {
     },
     age: {
       type: DataTypes.INTEGER,
-      defaultValue: 1,
+      defaultValue: '',
       required: true,
       validate: {
         max: {
@@ -61,9 +61,9 @@ module.exports = (db, DataTypes) => {
         },
       },
     },
-    isCartoon: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: true,
-    },
+    // isCartoon: {
+    //   type: DataTypes.BOOLEAN,
+    //   defaultValue: true,
+    // },
   });
 };
