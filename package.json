@@ -1,0 +1,49 @@
+{
+  "name": "web-app-2020-fall",
+  "version": "0.0.0",
+  "engines": {
+    "node": "14.x"
+  },
+  "private": true,
+  "scripts": {
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix .",
+    "prettier": "prettier --write .",
+    "dev": "nodemon ./bin/www",
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "compression": "latest",
+    "consolidate": "latest",
+    "cookie-parser": "latest",
+    "dotenv": "latest",
+    "ejs": "latest",
+    "express": "latest",
+    "express-ejs-layouts": "latest",
+    "express-validator": "latest",
+    "fs": "latest",
+    "helmet": "latest",
+    "http-errors": "latest",
+    "md5": "latest",
+    "morgan": "latest",
+    "passport": "latest",
+    "pg": "latest",
+    "pg-hstore": "latest",
+    "sequelize": "latest",
+    "sequelize-cli": "latest",
+    "serve-favicon": "latest",
+    "winston": "latest"
+  },
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-airbnb-base": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-import": "latest",
+    "eslint-plugin-node": "latest",
+    "eslint-plugin-prettier": "latest",
+    "eslint-plugin-security": "latest",
+    "nodemon": "latest",
+    "prettier": "latest",
+    "sqlite3": "latest"
+  }
+}

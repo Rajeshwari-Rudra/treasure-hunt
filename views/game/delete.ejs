@@ -1,0 +1,40 @@
+<!--
+*  Game create view
+*  Uses HTML and embedded JavaScript (EJS) 
+*  to dyanmically create a webpage to delete a new game.
+*
+* @author Blake Bennett <s532542@nwmissouri.edu>
+-->
+
+<% if (game.error) { %>
+    <div class="alert alert-danger" role="alert"><%- game.error %></div>
+    <% } %>
+    
+    <div class="card-body">
+    
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">playerCount</th>
+            <th scope="col">IsCardGame</th>
+            <th width=>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+    
+          <tr>
+            <th scope="row"><%= game.id %></th>
+            <td><%= game.name%></td>
+            <td><%= game.playerCount%></td>
+            <td><%= game.isCardGame%></td>
+            <td>
+              <form action="/game/delete/<%=game.id%>" method="post">
+                <input type="submit" class="btn btn-danger delete" value="Delete" onclick="return alert('Are You sure?')"/>
+              </form>
+            </td>
+          </tr>
+    
+        </tbody>
+      </table>
