@@ -1,13 +1,13 @@
 <!--
-*  Rabbit delete view
+*  team delete view
 *  Uses HTML and embedded JavaScript (EJS) 
-*  to dyanmically create a webpage to delete a rabbit.
+*  to dyanmically create a webpage to delete a team.
 *
 * @author Denise Case <dcase@nwmissouri.edu>
 -->
   
-<% if (rabbit.error) { %>
-  <div class="alert alert-danger" role="alert"><%- rabbit.error %></div>
+<% if (team.error) { %>
+  <div class="alert alert-danger" role="alert"><%- team.error %></div>
   <% } %>
   
   <div class="card-body">
@@ -25,12 +25,12 @@
       <tbody>
   
         <tr>
-          <th scope="row"><%= rabbit.id %></th>
-          <td><%= rabbit.name%></td>
-          <td><%= rabbit.age%></td>
-          <td><%= rabbit.isCartoon%></td>
+          <th scope="row"><%= team.id %></th>
+          <td><%= team.name%></td>
+          <td><%= team.age%></td>
+          <td><%= team.isCartoon%></td>
           <td>
-            <form action="/rabbit/delete/<%=rabbit.id%>" method="post">
+            <form action="/team/delete/<%=team.id%>" method="post">
               <input type="submit" class="btn btn-danger delete" value="Delete" onclick="return alert('Are You sure?')"/>
             </form>
           </td>
