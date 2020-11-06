@@ -14,7 +14,7 @@ const router = express.Router();
 
 // Manage top-level request first
 
-const appTitle = 'MVC Web App - Fall 2020';
+const appTitle = 'The Hunt App';
 const appSubTitle = 'our collaborative web app';
 
 /* GET home page. */
