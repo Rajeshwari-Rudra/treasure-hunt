@@ -51,8 +51,7 @@ exports.saveNew = async (req, res) => {
     LOG.error('ERROR SAVING Team');
     const item = {};
     item.name = req.body.name;
-    item.age = req.body.age;
-    item.isCartoon = req.body.isCartoon;
+    item.id = req.body.id;
     item.errors = err.errors;
     res.locals.Team = item;
     LOG.info(` ERROR ADDING Team:${item}`);
@@ -70,7 +69,7 @@ exports.saveEdit = async (req, res) => {
       where: { id: reqId },
     });
     LOG.info(`Updated: ${updated}`);
-    return res.redirect('/Team'); // always redirect back for now
+    return res.redirect('/team'); // always redirect back for now
   } catch (err) {
     return res.status(500).send(err.message);
   }
@@ -84,7 +83,7 @@ exports.deleteItem = async (req, res) => {
       where: { id: reqId },
     });
     if (deleted) {
-      return res.redirect('/Team');
+      return res.redirect('/team');
     }
     throw new Error(`${reqId} not found`);
   } catch (err) {
@@ -99,7 +98,7 @@ exports.showIndex = async (req, res) => {
   (await db).models.Team.findAll()
     .then((data) => {
       res.locals.Teams = data;
-      res.render('Team/index.ejs', { title: 'Teams', res });
+      res.render('team/index.ejs', { title: 'Teams', res });
     })
     .catch((err) => {
       res.status(500).send({
@@ -114,11 +113,10 @@ exports.showCreate = async (req, res) => {
   // this will provide a Team object to put any validation errors
   const tempItem = {
     name: 'TeamName',
-    age: 1,
-    isCartoon: true,
+    Id: 1,
   };
   res.locals.Team = tempItem;
-  res.render('Team/create.ejs', { title: 'Teams', res });
+  res.render('team/create.ejs', { title: 'Teams', res });
 };
 
 // GET /delete/:id
@@ -128,9 +126,9 @@ exports.showDelete = async (req, res) => {
     .then((data) => {
       res.locals.Team = data;
       if (data) {
-        res.render('Team/delete.ejs', { title: 'Teams', res });
+        res.render('team/delete.ejs', { title: 'Teams', res });
       } else {
-        res.redirect('Team/');
+        res.redirect('team/');
       }
     })
     .catch((err) => {
@@ -146,7 +144,7 @@ exports.showDetails = async (req, res) => {
   (await db).models.Team.findByPk(id)
     .then((data) => {
       res.locals.Team = data;
-      res.render('Team/details.ejs', { title: 'Teams', res });
+      res.render('team/details.ejs', { title: 'Teams', res });
     })
     .catch((err) => {
       res.status(500).send({
@@ -161,7 +159,7 @@ exports.showEdit = async (req, res) => {
   (await db).models.Team.findByPk(id)
     .then((data) => {
       res.locals.Team = data;
-      res.render('Team/edit.ejs', { title: 'Teams', res });
+      res.render('team/edit.ejs', { title: 'Teams', res });
     })
     .catch((err) => {
       res.status(500).send({
