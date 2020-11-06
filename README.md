@@ -141,3 +141,22 @@ psql "${DATABASE_URL}"
 
 ```
 
+##### Heroku commands (for Production App)
+
+```PowerShell
+heroku login
+heroku addons
+
+```
+
+#### Resources
+
+- [Dr.DeniseCase](https://github.com/denisecase/web-app-2020-fall)
+- [Express API with Postgres](https://www.smashingmagazine.com/2020/04/express-api-backend-project-postgresql/)
+- [See repo](https://github.com/chidimo/Express-API-Template)
+- [Getting Started with Sequelize and Postgres](https://dev.to/nedsoft/getting-started-with-sequelize-and-postgres-emp)
+- [Getting Started with Node, Express and PostgreSQL using Sequelize](https://morioh.com/p/fe03e5149f97)
+- [EJS CRUD tutorial](https://www.mynotepaper.com/nodejs-simple-crud-with-expressjs-and-mysql)
+- [EJS CRUD repo](https://github.com/mdobydullah/nodejs-crud-with-expressjs-mysql)
+- [MDN Guide to Publishing with Heroku](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)
+- [Provising Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#provisioning-heroku-postgres)
