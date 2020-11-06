@@ -22,7 +22,7 @@ module.exports = async (db) => {
 
   // Dr. Case - rabbit
   try {
-    await db.models.Rabbit.bulkCreate(
+    await db.models.Team.bulkCreate(
       [
         { name: 'Bugs', age: 2, isCartoon: true },
         { name: 'Huggy', age: 2, isCartoon: false },
@@ -30,10 +30,10 @@ module.exports = async (db) => {
       ],
       { validate: true }, // add options object to call new model validators
     );
-    const numRabbits = await db.models.Rabbit.count();
-    LOG.info(`Seeded ${numRabbits} rabbits.`);
+    const numTeams = await db.models.Team.count();
+    LOG.info(`Seeded ${numTeams} teams.`);
   } catch (err) {
-    LOG.error(`ERROR: Rabbit - ${err.message}`);
+    LOG.error(`ERROR: Team - ${err.message}`);
   }
 
   // Dr. Hoot - tea
