@@ -11,14 +11,15 @@
 - [Source](https://github.com/Rajeshwari-Rudra/treasure-hunt)
 
 ## Stack
+
 ##### Platform: Node(Version - v15.1.0)
-##### Web Framework: Express
-##### View engine: EJS
-##### DB: SQL 
-##### ORM: Sequelize 
-##### Web App Host: Heroku
-##### Data host: PostgreSQL
-##### Coding standards: Enforce AirBnB/Prettier/ESlint
+##### Web Framework : Express
+##### View engine : EJS
+##### Database : SQL 
+##### Object Relational Mapping(ORM) : Sequelize 
+##### Web App Host : Heroku
+##### Data host : PostgreSQL
+##### Coding standards : Enforce AirBnB/Prettier/ESlint
 
 ### CI/CD
  Auto-deploy from  main repo is required.
@@ -147,9 +148,16 @@ psql "${DATABASE_URL}"
 heroku login
 heroku addons
 
+click create new app on 'NEW' button
+type the name of your app and then click "create app"
+Create heroku project
+setting up this heroku project to get automatically connected to code so that whenever code is pushed to your GitHub repo it directly gets updated. 
+Heroku website is responding correctly with a default page.
+
+
 ```
 
-#### Resources
+#### References
 
 - [Dr.DeniseCase](https://github.com/denisecase/web-app-2020-fall)
 - [Express API with Postgres](https://www.smashingmagazine.com/2020/04/express-api-backend-project-postgresql/)
@@ -160,3 +168,12 @@ heroku addons
 - [EJS CRUD repo](https://github.com/mdobydullah/nodejs-crud-with-expressjs-mysql)
 - [MDN Guide to Publishing with Heroku](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)
 - [Provising Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#provisioning-heroku-postgres)
+
+### Team Members
+
+#### Boddu Nooka Raju :- Team Leader
+#### Rohith Reddy Avisakula :- Architect
+#### Bhaskar reddy Minupuri :- Front-end eveloper
+#### Puneeth Annam :- Back-end Developer
+#### Rajeshwari Rudravaram :- Database Administrator
+
