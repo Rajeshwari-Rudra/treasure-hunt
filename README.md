@@ -26,7 +26,7 @@
  
 ### Guidelines: 
  
-#### Prerequisites
+### Prerequisites
 
 - Node.js (comes with npm)
 - Git
@@ -79,7 +79,7 @@ Add yourself and email as the author (follow examples).
 
 ### Septs for Contribution:
 
-#### Step 1 - Get fresh code.
+### Step 1 - Get fresh code.
 
 1. Pull fresh code. (Fork & clone if this is the first time.)
 1. Run npm install
@@ -91,7 +91,7 @@ npm install
 npm run start
 ```
 
-#### Step 2 - Make your contributions.
+### Step 2 - Make your contributions.
 
 As you test your code, format it with Prettier and
 lint (clean it up) with ESLint.
@@ -109,7 +109,7 @@ npm run lint
 npm run lint-fix
 ```
 
-#### Step 3 - Save your work.
+### Step 3 - Save your work.
 
 1. Git add & git commit locally.
 1. Git push to the origin.
@@ -128,13 +128,13 @@ npm run start
 
 View the application locally at <http://localhost:3020/>
 
-#### Sequelize commands
+### Sequelize commands
 
 ```PowerShell
 npx sequelize-cli db:migrate
 ```
 
-#### PostgreSQL commands (for Production Database)
+### PostgreSQL commands (for Production Database)
 
 ```PowerShell
 Start-Process 'C:\Program Files\PostgreSQL\13\scripts\runpsql.bat'
@@ -142,7 +142,7 @@ psql "${DATABASE_URL}"
 
 ```
 
-##### Heroku commands (for Production App)
+#### Heroku commands (for Production App)
 
 ```PowerShell
 heroku login
@@ -157,7 +157,7 @@ Heroku website is responding correctly with a default page.
 
 ```
 
-#### References
+### References
 
 - [Dr.DeniseCase](https://github.com/denisecase/web-app-2020-fall)
 - [Express API with Postgres](https://www.smashingmagazine.com/2020/04/express-api-backend-project-postgresql/)
