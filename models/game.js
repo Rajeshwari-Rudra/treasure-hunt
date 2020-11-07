@@ -1,6 +1,6 @@
 /**
- *  Rabbit model
- *  Describes the characteristics of each attribute in a rabbit resource.
+ *  team model
+ *  Describes the characteristics of each attribute in a team resource.
  *
  * @author Blake Bennett <s532542@nwmissouri.edu>
  *

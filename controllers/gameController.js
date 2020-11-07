@@ -46,7 +46,7 @@ exports.saveNew = async (req, res) => {
   try {
     context.models.Game.create(req.body);
   } catch (err) {
-    // store the user inputs & the validation errors in res.locals.rabbit
+    // store the user inputs & the validation errors in res.locals.team
     // err includes err.message & err.errors (array of validator msgs)
     LOG.error('ERROR SAVING GAME');
     const item = {};

@@ -41,7 +41,7 @@ exports.findOne = (req, res) => {
 // POST /save
 exports.saveNew = async (req, res) => {
   try {
-    await db.models.Rabbit.create(req.body);
+    await db.models.team.create(req.body);
     return res.redirect('/tea');
   } catch (error) {
     return res.status(500).json({ error: error.message });
@@ -67,7 +67,7 @@ exports.saveEdit = async (req, res) => {
 // POST /delete/:id
 exports.deleteItem = async (req, res) => {
   try {
-    const { reqId } = req.params.rabbitId;
+    const { reqId } = req.params.teamId;
     const deleted = await db.models.Tea.destroy({
       where: { id: reqId },
     });

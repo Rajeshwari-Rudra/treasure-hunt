@@ -20,7 +20,7 @@ module.exports = async (db) => {
     LOG.error(`ERROR: on sync (recreate) - ${err.message}`);
   }
 
-  // Dr. Case - rabbit
+  // Dr. Case - team
   try {
     await db.models.Team.bulkCreate(
       [

@@ -1,13 +1,13 @@
 <!--
-*  Rabbit create view
+*  team create view
 *  Uses HTML and embedded JavaScript (EJS) 
-*  to dyanmically create a webpage to create a new rabbit.
+*  to dyanmically create a webpage to create a new team.
 *
 * @author Denise Case <dcase@nwmissouri.edu>
 -->
 
-<% if (rabbit && rabbit.error) { %>
-  <div class="alert alert-danger" role="alert"><%- JSON.stringify(rabbit.error) %></div>
+<% if (team && team.error) { %>
+  <div class="alert alert-danger" role="alert"><%- JSON.stringify(team.error) %></div>
   <% } %>
 
 <div class="card">
@@ -15,20 +15,20 @@
     Add Team
   </div>
   <div class="card-body">
-    <form action="/rabbit/save" method="post">
+    <form action="/team/save" method="post">
       <div class="form-group">
         <label for="name">Name:</label>
-        <input type="text" class="form-control" id="name" name="name" value="<%= rabbit.name %>" autocomplete="off">
+        <input type="text" class="form-control" id="name" name="name" value="<%= team.name %>" autocomplete="off">
       </div>
       <div class="form-group">
         <label for="age">Team Number:</label>
-        <input type="number" class="form-control" id="age" name="age" value="<%= rabbit.age %>" min=1 max=100 step=1 default=1
+        <input type="number" class="form-control" id="age" name="age" value="<%= team.age %>" min=1 max=100 step=1 default=1
           autocomplete="off">
       </div>
       <br>
       <!-- Checked checkbox -->
       <!-- <div class="form-check">
-        <input type="checkbox" class="form-check-input" id="checkbox" value="<%= rabbit.isCartoon %>" checked />
+        <input type="checkbox" class="form-check-input" id="checkbox" value="<%= team.isCartoon %>" checked />
         <label class="form-check-label" for="checkbox">
           Is Cartoon?
         </label>

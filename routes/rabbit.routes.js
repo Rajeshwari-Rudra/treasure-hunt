@@ -1,5 +1,5 @@
 /**
- * Route rabbit requests to the correct controller function.
+ * Route team requests to the correct controller function.
  *
  * A request includes:
  *  an HTTP verb (e.g., get or post) AND
@@ -12,9 +12,9 @@
  */
 
 const router = require('express').Router();
-const controller = require('../controllers/rabbitController.js');
+const controller = require('../controllers/teamController.js');
 
-console.info('Starting rabbit routing.');
+console.info('Starting team routing.');
 
 // -----------------------------------------------------------------------------
 // match each expeced verb + URL request
@@ -40,6 +40,6 @@ router.get('/details/:id', controller.showDetails);
 router.get('/edit/:id', controller.showEdit);
 router.get('/delete/:id', controller.showDelete);
 
-console.info('Loaded rabbit routes.');
+console.info('Loaded team routes.');
 
 module.exports = router;
