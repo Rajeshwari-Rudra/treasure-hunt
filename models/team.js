@@ -5,14 +5,14 @@
 * 
 */
 module.exports = (db, DataTypes) => {
-  db.define('team', {
+  db.define('Team', {
     // sqlite creates a rowid attribute automatically
     name: {
       type: DataTypes.STRING(30),
       unique: true,
       required: true,
       allowNull: false,
-      defaultValue: 'Enter Name',
+      defaultValue: 'Team',
       validate: {
         is: {
           args: /^[A-Za-z]+$/i, // matches a RegExp
