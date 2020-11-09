@@ -48,15 +48,15 @@ exports.saveNew = async (req, res) => {
   } catch (err) {
     // store the user inputs & the validation errors in res.locals.Team
     // err includes err.message & err.errors (array of validator msgs)
-    LOG.error('ERROR SAVING Team');
+    LOG.error('ERROR SAVING TEAM');
     const item = {};
     item.name = req.body.name;
     item.id = req.body.id;
     item.errors = err.errors;
-    res.locals.Team = item;
-    LOG.info(` ERROR ADDING Team:${item}`);
+    res.locals.team = item;
+    LOG.info(` ERROR ADDING TEAM:${item}`);
   }
-  return res.redirect('/Team');
+  return res.redirect('/team');
 };
 
 // POST /save/:id
@@ -97,7 +97,7 @@ exports.deleteItem = async (req, res) => {
 exports.showIndex = async (req, res) => {
   (await db).models.Team.findAll()
     .then((data) => {
-      res.locals.Teams = data;
+      res.locals.teams = data;
       res.render('team/index.ejs', { title: 'Teams', res });
     })
     .catch((err) => {
@@ -115,7 +115,7 @@ exports.showCreate = async (req, res) => {
     name: 'TeamName',
     Id: 1,
   };
-  res.locals.Team = tempItem;
+  res.locals.team = tempItem;
   res.render('team/create.ejs', { title: 'Teams', res });
 };
 
@@ -124,7 +124,7 @@ exports.showDelete = async (req, res) => {
   const { id } = req.params;
   (await db).models.Team.findByPk(id)
     .then((data) => {
-      res.locals.Team = data;
+      res.locals.team = data;
       if (data) {
         res.render('team/delete.ejs', { title: 'Teams', res });
       } else {
@@ -143,7 +143,7 @@ exports.showDetails = async (req, res) => {
   const { id } = req.params;
   (await db).models.Team.findByPk(id)
     .then((data) => {
-      res.locals.Team = data;
+      res.locals.team = data;
       res.render('team/details.ejs', { title: 'Teams', res });
     })
     .catch((err) => {
@@ -158,7 +158,7 @@ exports.showEdit = async (req, res) => {
   const { id } = req.params;
   (await db).models.Team.findByPk(id)
     .then((data) => {
-      res.locals.Team = data;
+      res.locals.team = data;
       res.render('team/edit.ejs', { title: 'Teams', res });
     })
     .catch((err) => {
