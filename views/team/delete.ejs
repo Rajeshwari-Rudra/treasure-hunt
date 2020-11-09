@@ -15,8 +15,10 @@
   <table class="table">
     <thead>
       <tr>
+        <th scope="col">ID</th>
         <th scope="col">TeamName</th>
-        <th scope="col">TeamId</th>
+        <th scope="col">Team Id</th>
+        <th scope="col">IsCreated</th>
         <th width=>Action</th>
       </tr>
     </thead>
@@ -25,10 +27,11 @@
       <tr>
         <th scope="row"><%= team.id %></th>
         <td><%= team.name%></td>
-        <td><%= team.id%></td>
+        <td><%= team.age%></td>
+        <td><%= team.isCreated%></td>
         <td>
           <form action="/team/delete/<%=team.id%>" method="post">
-            <input type="submit" class="btn btn-danger delete" value="Delete" onclick="return alert('Are You sure?')" />
+            <input type="submit" class="btn btn-danger delete" value="Delete" onclick="return alert('is that ok?')" />
           </form>
         </td>
       </tr>
