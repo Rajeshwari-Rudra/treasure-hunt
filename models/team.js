@@ -53,9 +53,9 @@ module.exports = (db, DataTypes) => {
         },
       },
     },
-    // isCartoon: {
-    //   type: DataTypes.BOOLEAN,
-    //   defaultValue: true,
-    // },
+    isCartoon: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true,
+    },
   });
 };
