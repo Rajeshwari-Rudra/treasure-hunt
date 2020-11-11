@@ -51,7 +51,8 @@ exports.saveNew = async (req, res) => {
     LOG.error('ERROR SAVING TEAM');
     const item = {};
     item.name = req.body.name;
-    item.id = req.body.id;
+     item.age = req.body.age;
+    item.isCartoon = req.body.isCartoon;
     item.errors = err.errors;
     res.locals.team = item;
     LOG.info(` ERROR ADDING TEAM:${item}`);
