@@ -1,0 +1,108 @@
+/**
+ * @create.ejs - create new
+ *
+ *
+ * @author Rajeshwari
+ */
+
+ <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+        .test {
+            color: #000000;
+            font-size: x-large;
+            text-align: right;
+            margin: 20px 0;
+            padding: 10px;
+            white-space: nowrap;
+        }
+
+        .test span {
+            float: left;
+            width: 5em;
+            text-align: left;
+        }
+
+        input {
+            border-top-style: hidden;
+            border-right-style: hidden;
+            border-left-style: hidden;
+            border-bottom-style: groove;
+            background-color: #eee;
+        }
+
+        .no-outline:focus {
+            outline: none;
+        }
+
+        .dropdown {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<main>
+    <h1 style="text-align:center">Create Competition
+        <h1>
+
+
+
+            <div style="text-align:center">
+                <input type="text" class="no-outline" placeholder="Enter Competition Name">
+            </div>
+
+
+            <span>
+                <p style="text-align:center" class="test">
+                    <input placeholder="Start Date" class="textbox-n" type="text" onfocus="(this.type = 'date')"
+                        id="date">
+                    <input placeholder="Start Time" class="textbox-n" type="text" onfocus="(this.type = 'time')"
+                        id="time"> </p>
+            </span>
+
+            <span>
+                <p style="text-align:center" class="test">
+                    <input placeholder="End Date" class="textbox-n" type="text" onfocus="(this.type = 'date')"
+                        id="date">
+                    <input placeholder="End Time" class="textbox-n" type="text" onfocus="(this.type = 'time')"
+                        id="time"> </p>
+            </span>
+
+
+            <br>
+            <br>
+
+
+            <div class="row">
+                <!-- <div class="col-sm-2"> </div>
+                <div class="col-sm-2"> </div>
+                <div class="col-sm-1"> </div> -->
+                <div class="col-sm-12">
+                    <div class="dropdown">
+                        <button data-toggle="dropdown" type="button"
+                            style="background-color: rgba(219, 214, 212, 0.719);background-color:#00674c; height:50px; width: 250px; font-size: 25px;;color:rgb(10, 10, 10);">
+                            <span class="caret"></span> Choose Quest
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Quest 1</a></li>
+                            <li><a href="#">Quest 2</a></li>
+                            <li><a href="#">Quest 3</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-2"> </div>
+                    <div class="col-sm-2"> </div>
+                </div>
+            </div>
+
+
+</main>

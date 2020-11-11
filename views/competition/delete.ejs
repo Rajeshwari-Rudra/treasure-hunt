@@ -1,0 +1,242 @@
+/**
+ * @delete.ejs
+ *
+ *
+ * @author Rohith Reddy
+ */
+
+
+
+
+ <head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="styles1.css">
+
+  <style>
+    h2 {
+      color: #0e532b;
+
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* Create two equal columns that floats next to each other */
+    .column {
+      float: left;
+      width: 60%;
+      padding: 10px;
+      height:auto;
+      border-radius: 18px;
+
+    }
+
+
+    
+    .row{
+      
+
+justify-content: center;
+border-radius: 5px;
+
+     
+    }
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+      margin:auto;
+      width: 500 px;
+      align-items: center;
+    }
+
+   /* Style buttons */
+.btn {
+  background-color: rgb(199, 196, 196);  
+  border: none; /* Remove borders */
+ /* color:#929997; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+ /* cursor: pointer;  Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+ /* background-color: rgb(208, 219, 216); */
+}
+
+.btn2 {
+  background-color: rgb(199, 196, 196);  
+  border: none; /* Remove borders */
+ /* color:#929997; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer;  /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn2:hover {
+ background-color: rgb(208, 219, 216); 
+}
+
+    input {
+
+      text-align: left;
+      margin-right: 10 px;
+      background-color: transparent;
+      color: #0e0d0d;
+      outline: none;
+      outline-style: none;
+      outline-offset: 0;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: none;
+    }
+
+
+    .test {
+      color: rgb(199, 196, 196);
+      font-size: x-large;
+      text-align: left;
+      /* margin: 20px 0;
+  padding: 10px;*/
+      white-space: nowrap;
+    }
+
+    .test span {
+      float: left;
+      text-align: left;
+    }
+
+    .no-outline:focus {
+      outline: none;
+      color: #10533f;
+    }
+
+    ::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: #10533f;
+      opacity: 1;
+      /* Firefox */
+    }
+    .fa-pen:before {
+    content: "\f304";
+    color:#10533f;
+    align-items: right;
+}
+.fa-trash-alt {
+  content: "\f304";
+    color:#10533f;
+    align-items: right;
+}
+
+.content {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 10px;
+}
+  </style>
+</head>
+
+<body>
+<div class="text-center">
+  <div class="row">
+    <div class="column" style="background-color:rgb(199, 196, 196);">
+      <div style="text-align: right" color=#10533f> <span id="demo" onclick="myFunction()">Go to map</span></div>
+
+      <script>
+        function myFunction() {
+          document.getElementById("demo").style.color = "#10533f";
+        }
+      </script>
+      <h2>Competition 1</h2>
+      <div style="text-align: left">
+        <span>
+          <p style="text-align:left" class="test">
+            <input placeholder="Start Date" class="textbox-n" type="text" onfocus="(this.type = 'date')" id="date">
+
+          <div style="text-align:left" color=#10533f>
+            <input type="text" class="no-outline" placeholder="Start Location">
+          </div>
+        </span>
+
+      </div>
+      <div style="text-align: right">
+        <button class="btn"><i class="fas fa-pen" ></i></button>
+        <button class="btn2"><i class="fas fa-trash-alt"></i></button>
+        </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="column" style="background-color:rgb(199, 196, 196);">
+      <div style="text-align: right" color=#10533f> <span id="demo1" onclick="myFunction1()">Go to map</span></div>
+
+      <script>
+        function myFunction1() {
+          document.getElementById("demo1").style.color = "#10533f";
+        }
+      </script>
+      <h2>Competition 2</h2>
+      <div style="text-align: left">
+        <span>
+          <p style="text-align:left" class="test">
+            <input placeholder="Start Date" class="textbox-n" type="text" onfocus="(this.type = 'date')" id="date">
+
+          <div style="text-align:left" color=#10533f>
+            <input type="text" class="no-outline" placeholder="Start Location">
+          </div>
+        </span>
+      </div>
+      <div style="text-align: right">
+        <button class="btn"><i class="fas fa-pen" ></i></button>
+        <button class="btn2"><i class="fas fa-trash-alt"></i></button>
+        </div>
+    </div>
+
+  </div>
+  <br>
+
+
+  <div class="row">
+    <div class="column" style="background-color:rgb(199, 196, 196);">
+      <div style="text-align: right" color=#10533f> <span id="demo2" onclick="myFunction2()">Go to map</span></div>
+
+      <script>
+        function myFunction2() {
+          document.getElementById("demo2").style.color = "#10533f";
+        }
+      </script>
+      <h2>Competition 3</h2>
+      <div style="text-align: left">
+        <span>
+          <p style="text-align:left" class="test">
+            <input placeholder="Start Date" class="textbox-n" type="text" onfocus="(this.type = 'date')" id="date">
+
+          <div style="text-align:left" color=#10533f>
+            <input type="text" class="no-outline" placeholder="Start Location">
+          </div>
+        </span>
+      </div>
+      <div style="text-align: right">
+        <button class="btn"><i class="fas fa-pen" ></i></button>
+        <button class="btn2"><i class="fas fa-trash-alt"></i></button>
+        </div>
+    </div>
+  </div>
+  <br>
+</div>
+</body>

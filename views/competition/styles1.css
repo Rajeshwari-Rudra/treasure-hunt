@@ -1,0 +1,70 @@
+body {
+    background: #f8f6f6;
+    
+    vertical-align: middle;
+  
+}
+.text-line {
+    margin: 0;
+    background-color: transparent;
+    color: #0e0d0d;
+    outline: none;
+    outline-style: none;
+    outline-offset: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid #070707 1px;
+    padding: 3px 10px;
+    
+}
+
+.textbox-n {
+    text-align: left;
+    margin-right: 10 px;
+    background-color: transparent;
+    color: #10533f;
+    outline: none;
+    outline-style: none;
+    outline-offset: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+   /* border-bottom: solid #070707 1px;
+    padding: 3px 20px;*/
+}
+
+.date-time {
+    margin: 0;
+    background-color: transparent;
+    color: #10533f;
+    outline: none;
+    outline-style: none;
+    outline-offset: 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+   /* border-bottom: solid #070707 1px;
+    padding: 3px 10px;*/
+
+}
+
+
+
+input[type="date"]::before{
+    color: #10533f;
+    content: attr(placeholder) ": ";
+ }
+ /* input[type="date"]:focus::before {
+    content: "" !important;
+ }*/
+
+ input[type="time"]::before{
+    color: #10533f;
+    content: attr(placeholder) ": ";
+ }
+ input[type="time"]:focus::before {
+    content: "" !important;
+ }

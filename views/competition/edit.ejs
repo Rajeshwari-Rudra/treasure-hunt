@@ -1,0 +1,110 @@
+/**
+ * @edit.ejs
+ *
+ *
+ * @author Puneeth
+ */
+
+ 
+<head>
+	<title>Competition edit</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<style>
+		.card {
+			background-color: #e5e5e5;
+			border-radius: 15px;
+		}
+		.container .btn.btn-primary {
+			border-radius: 7px;
+			padding: 3px 45px;
+		}
+		textarea:hover,
+		input:hover,
+		textarea:active,
+		input:active,
+		textarea:focus,
+		input:focus,
+		button:focus,
+		button:active,
+		button:hover,
+		label:focus,
+		.btn:active,
+		.btn.active {
+			outline: 0px !important;
+			-webkit-appearance: none !important;
+			box-shadow: none !important;
+			border-color: #10533f !important;
+		}
+		.btn-primary,
+		.btn-primary:hover,
+		.btn-primary:focus,
+		.btn-primary:active,
+		.btn-primary:visited {
+			background-color: #10533f !important;
+			border-color: #10533f !important;
+			outline: none !important;
+			border: none !important;
+		}
+		.form-control {
+			background-color: #C4C4C4;
+			width: 75%;
+		}
+		.float-left {
+			margin-top: 0px;
+		}
+		#exampleInputEmail1 {
+			/* Chrome, Firefox, Opera, Safari 10.1+ */
+			color: #10533f;
+			opacity: 1;
+			/* Firefox */
+		}
+		#placeholder {
+			color: black;
+
+		}
+	</style>
+  </head>
+  <body>
+	<br>
+	<div class="container">
+		<div class="card">
+  
+			<div class="card-body">
+				<form>
+					<div class="form-group">
+						<input type="competition" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+							value="Competition 1">
+					</div>		
+					<div class="form-group">
+						<input placeholder="Start Date" class="form-control" type="text" onfocus="(this.type = 'date')" id="date">
+					</div>
+					<div class="form-group">
+						<input type="location" class="form-control" id="exampleInputPassword1" value="Location">
+					</div>
+				</form>
+  
+				<!-- <div>Creator:<span class="creator"></span></div> -->
+  
+				<div class="d-flex justify-content-center">
+					<button href="#" class="btn btn-primary">Submit</button>
+				</div>
+				<br>
+				<div class="d-flex justify-content-center">
+					<button href="#" class="btn btn-primary">Revert</button>
+				</div>
+  
+			</div>
+		</div>
+  
+		<br>
+		<div class="d-flex justify-content-center">
+			<button href="#" class="btn btn-primary">Cancel</button>
+		</div>
+	</div>
+  </body>
