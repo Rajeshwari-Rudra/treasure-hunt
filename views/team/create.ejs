@@ -17,12 +17,12 @@
     <div class="card-body">
       <form action="/team/save" method="post">
         <div class="form-group">
-          <label for="name">Team Name:</label>
+          <label for="name">Name:</label>
           <input type="text" class="form-control" id="name" name="name" value="<%= team.name %>" autocomplete="off">
         </div>
         <div class="form-group">
-          <label for="id">Team Id:</label>
-          <input type="number" class="form-control" id="id" name="id" value="<%= team.id %>" min=1 max=100 step=1 default=1
+          <label for="age">Age:</label>
+          <input type="number" class="form-control" id="age" name="age" value="<%= team.age %>" min=1 max=100 step=1 default=1
             autocomplete="off">
         </div>
         <br>
