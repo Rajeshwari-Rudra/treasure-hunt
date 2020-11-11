@@ -8,8 +8,7 @@
  * - production
  *
  * 
- * @ link https://github.com/goldbergyoni/nodebestpractices/blob/master/sections/projectstructre/separateexpress.md
- * 
+ * @
  */
 
 // Import dependencies ............................................
@@ -17,7 +16,7 @@
 const dotenv = require('dotenv');
 const LOG = require('../util/logger');
 const app = require('../app');
-const server = require('http').createServer(app);
+const http = require('http');
 
 // Helper functions defined first ...................................
 
@@ -81,6 +80,11 @@ const onError = (error) => {
 
 // Configure & start the server .........................................
 
+/**
+ * Create HTTP server
+ * Pass in (inject) the Express app
+ */
+const server = http.createServer(app);
 /**
  * Event listener for HTTP server "listening" event.
  *
