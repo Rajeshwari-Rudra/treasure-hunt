@@ -114,7 +114,8 @@ exports.showCreate = async (req, res) => {
   // this will provide a Team object to put any validation errors
   const tempItem = {
     name: 'TeamName',
-    Id: 1,
+    age: 1,
+    isCartoon:true,
   };
   res.locals.team = tempItem;
   res.render('team/create.ejs', { title: 'Teams', res });
