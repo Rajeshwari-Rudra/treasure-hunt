@@ -13,13 +13,17 @@
   <div class="card-body">
     <form action="/team/save/<%= team.id %>" method="post">
       <div class="form-group">
-        <label for="name">Team Name:</label>
-        <input type="text" class="form-control" id="name" name="name" value="<%= team.name %>" autocomplete="off">
+         <label for="age">Age:</label>
+        <input type="number" class="form-control" id="age" name="age" value="<%= team.age %>" min=1 max=100 step=1 default=2
+          autocomplete="off">
       </div>
-      <div class="form-group">
-        <label for="Id">TeamId:</label>
-        <input type="number" class="form-control" id="teamid" name="teamid" value="<%= team.id %>" min=1 max=100 step=1
-          default=2 autocomplete="off">
+      <br>
+      <!-- Checked checkbox -->
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="checkbox" value="<%= team.isCartoon %>" checked />
+        <label class="form-check-label" for="checkbox">
+          Is Cartoon?
+        </label>
       </div>
       <br>
       <div class="form-group">
