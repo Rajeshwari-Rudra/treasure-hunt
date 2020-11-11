@@ -17,8 +17,8 @@
       <tr>
         <th scope="col">ID</th>
         <th scope="col">Name</th>
-        <th scope="col">Team Id</th>
-        <th scope="col">IsCreated</th>
+        <th scope="col">Age</th>
+        <th scope="col">IsCartoon</th>
         <th width=>Action</th>
       </tr>
     </thead>
@@ -28,7 +28,7 @@
         <th scope="row"><%= team.id %></th>
         <td><%= team.name%></td>
         <td><%= team.age%></td>
-        <td><%= team.isCreated%></td>
+        <td><%= team.isCartoon%></td>
         <td>
           <form action="/team/delete/<%=team.id%>" method="post">
             <input type="submit" class="btn btn-danger delete" value="Delete" onclick="return alert('is that ok?')" />
