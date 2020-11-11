@@ -20,20 +20,18 @@ module.exports = async (db) => {
     LOG.error(`ERROR: on sync (recreate) - ${err.message}`);
   }
 
-  // Dr. Case - team
+  // Dr. Case - rabbit
   try {
     await db.models.Team.bulkCreate(
       [
         { name: 'Bugs', age: 2, isCartoon: true },
         { name: 'Huggy', age: 2, isCartoon: false },
         { name: 'Doc', age: 2, isCartoon: true },
-//         {name: 'King' , id: 1 },
-//         {name: 'queen',id: 2 },
       ],
       { validate: true }, // add options object to call new model validators
     );
     const numTeams = await db.models.Team.count();
-    LOG.info(`Seeded ${numTeams} teams.`);
+    LOG.info(`Seeded ${numTeams} teamss.`);
   } catch (err) {
     LOG.error(`ERROR: Team - ${err.message}`);
   }

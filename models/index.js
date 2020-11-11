@@ -59,7 +59,7 @@ module.exports = async () => {
 
     LOG.info('Start reading all model definitions.');
 
-    // Dr. Case - team
+    // Dr. Case - rabbit
     require('./team')(db, DataTypes);
 
     // Dr. Hoot - tea

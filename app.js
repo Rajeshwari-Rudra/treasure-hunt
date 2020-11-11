@@ -1,7 +1,7 @@
 /**
  *  The main program for our web app.
  *
- * @author Rajeshwari Rudravaram
+ * @author Denise Case <dcase@nwmissouri.edu>
  */
 
 // import default dependencies
@@ -57,7 +57,7 @@ app.use('/users', require('./routes/users'));
 
 LOG.info('app default routes configured');
 
-// team
+// Dr. Case - Team
 try {
   app.use('/team', require('./routes/team.routes'));
 } catch (err) {

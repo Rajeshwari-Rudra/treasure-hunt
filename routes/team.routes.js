@@ -8,7 +8,7 @@
  * Match each expeced verb + URL request
  * with a custom function to handle it
  *
- * @author Puneeth Annam <S538293@nwmissouri.edu>
+ * @author Denise Case <dcase@nwmissouri.edu>
  */
 
 const router = require('express').Router();

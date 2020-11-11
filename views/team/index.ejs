@@ -5,10 +5,11 @@
 *  Uses HTML and embedded JavaScript (EJS) 
 *  to dyanmically create a webpage to list all teams.
 *
-* @author Puneeth Annam <S538293@nwmissouri.edu>
+* @author Denise Case <dcase@nwmissouri.edu>
 
 * based on https://www.mynotepaper.com/nodejs-simple-crud-with-expressjs-and-mysql
 * repo https://github.com/mdobydullah/nodejs-crud-with-expressjs-mysql
+
 -->
 
 <% if (locals.teams.success) { %>
@@ -62,11 +63,14 @@
       </tbody>
     </table>
     <% } %>
+
     <!-- if result is empty -->
     <% if(!teams.length) { %>
     <p class="text-center">No teams found!</p>
     <% } %>
+
     <br>
     <h3>Mouse over icons to see where you will go.</h3>
+
   </div>
 </div>

@@ -84,7 +84,7 @@ exports.deleteItem = async (req, res) => {
 
 // GET to this controller base URI (the default)
 exports.showIndex = (req, res) => {
-  // res.send('NOT IMPLEMENTED: Will show team/index.ejs');
+  // res.send('NOT IMPLEMENTED: Will show rabbit/index.ejs');
   res.render('cricket/index.ejs', { title: 'Cricket Teams', req });
 };
 

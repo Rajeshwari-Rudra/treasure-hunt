@@ -8,11 +8,12 @@
 const LOG = require('../util/logger');
 
 const db = require('../models/index')();
+//const db = require('../models/index');
 
 // FUNCTIONS TO RESPOND WITH JSON DATA  ----------------------------------------
 
 // GET all JSON
-exports.findAll = async (req, res) => {
+exports.findAll = (req, res) => {
   (await db).models.Game.findAll()
     .then((data) => {
       res.send(data);
@@ -25,7 +26,7 @@ exports.findAll = async (req, res) => {
 };
 
 // GET one JSON by ID
-exports.findOne = async (req, res) => {
+exports.findOne = (req, res) => {
   const { id } = req.params;
   (await db).models.Game.findByPk(id)
     .then((data) => {
@@ -42,22 +43,12 @@ exports.findOne = async (req, res) => {
 
 // POST /save
 exports.saveNew = async (req, res) => {
-  const context = await db;
   try {
-    context.models.Game.create(req.body);
-  } catch (err) {
-    // store the user inputs & the validation errors in res.locals.team
-    // err includes err.message & err.errors (array of validator msgs)
-    LOG.error('ERROR SAVING GAME');
-    const item = {};
-    item.name = req.body.name;
-    item.playerCount = req.body.playerCount;
-    item.isCardGame = req.body.isCardGame;
-    item.errors = err.errors;
-    res.locals.game = item;
-    LOG.info(` ERROR ADDING GAME:${item}`);
+    await db.models.Game.create(req.body);
+    return res.redirect('/game');
+  } catch (error) {
+    return res.status(500).json({ error: error.message });
   }
-  return res.redirect('/game');
 };
 
 // POST /save/:id
@@ -95,22 +86,13 @@ exports.deleteItem = async (req, res) => {
 // RESPOND WITH VIEWS  --------------------------------------------
 
 // GET to this controller base URI (the default)
-exports.showIndex = async (req, res) => {
+exports.showIndex = (req, res) => {
   // res.send('NOT IMPLEMENTED: Will show game/index.ejs');
-  (await db).models.Game.findAll()
-    .then((data) => {
-      res.locals.games = data;
-      res.render('game/index.ejs', { title: 'Games', res });
-    })
-    .catch((err) => {
-      res.status(500).send({
-        message: err.message || 'Error retrieving all.',
-      });
-    });
+  res.render('game/index.ejs', { title: 'Games', req });
 };
 
 // GET /create
-exports.showCreate = async (req, res) => {
+exports.showCreate = (req, res) => {
   // create a temp game and add it to the response.locals object
   // this will provide a game object to put any validation errors
   const tempItem = {
@@ -123,7 +105,7 @@ exports.showCreate = async (req, res) => {
 };
 
 // GET /delete/:id
-exports.showDelete = async (req, res) => {
+exports.showDelete = (req, res) => {
   const { id } = req.params;
   (await db).models.Game.findByPk(id)
     .then((data) => {
@@ -146,7 +128,7 @@ exports.showDetails = async (req, res) => {
   const { id } = req.params;
   (await db).models.Game.findByPk(id)
     .then((data) => {
-      res.locals.game = data;
+      res.locals.Game = data;
       res.render('game/details.ejs', { title: 'Games', res });
     })
     .catch((err) => {
@@ -157,7 +139,7 @@ exports.showDetails = async (req, res) => {
 };
 
 // GET /edit/:id
-exports.showEdit = async (req, res) => {
+exports.showEdit = (req, res) => {
   const { id } = req.params;
   (await db).models.Game.findByPk(id)
     .then((data) => {

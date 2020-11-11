@@ -3,7 +3,7 @@
 *  Uses HTML and embedded JavaScript (EJS) 
 *  to dyanmically create a webpage to display a team.
 *
-* @author Puneeth Annam <S538293@nwmissouri.edu>
+* @author Denise Case <dcase@nwmissouri.edu>
 -->
 
 <% if (team.error) { %>
@@ -16,16 +16,18 @@
     <thead>
       <tr>
         <th scope="col">#</th>
+        <th scope="col">Name</th>
         <th scope="col">Age</th>
         <th scope="col">IsCartoon</th>
-        <th>Action</th>
+        <th >Action</th>
       </tr>
     </thead>
     <tbody>
 
       <tr>
         <th scope="row"><%= team.id %></th>
-       <td><%= team.age%></td>
+        <td><%= team.name%></td>
+        <td><%= team.age%></td>
         <td><%= team.isCartoon%></td>
         <td>
           <a class="btn btn-success edit" href="/team">Done</a>

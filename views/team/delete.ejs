@@ -1,40 +1,41 @@
 <!--
-*  team delete view
+*  Team delete view
 *  Uses HTML and embedded JavaScript (EJS) 
 *  to dyanmically create a webpage to delete a team.
 *
-* @author Bhaskar reddy <S538310@nwmissouri.edu>
+* @author Denise Case <dcase@nwmissouri.edu>
 -->
-
+  
 <% if (team.error) { %>
-<div class="alert alert-danger" role="alert"><%- team.error %></div>
-<% } %>
-
-<div class="card-body">
-
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">ID</th>
-        <th scope="col">Name</th>
-        <th scope="col">Age</th>
-        <th scope="col">IsCartoon</th>
-        <th width=>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-
-      <tr>
-        <th scope="row"><%= team.id %></th>
-        <td><%= team.name%></td>
-        <td><%= team.age%></td>
-        <td><%= team.isCartoon%></td>
-        <td>
-          <form action="/team/delete/<%=team.id%>" method="post">
-            <input type="submit" class="btn btn-danger delete" value="Delete" onclick="return alert('is that ok?')" />
-          </form>
-        </td>
-      </tr>
-
-    </tbody>
-  </table>
+  <div class="alert alert-danger" role="alert"><%- team.error %></div>
+  <% } %>
+  
+  <div class="card-body">
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Team Id</th>
+          <th scope="col">IsCreated</th>
+          <th width=>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+  
+        <tr>
+          <th scope="row"><%= team.id %></th>
+          <td><%= team.name%></td>
+          <td><%= team.age%></td>
+          <td><%= team.isCreated%></td>
+          <td>
+            <form action="/team/delete/<%=team.id%>" method="post">
+              <input type="submit" class="btn btn-danger delete" value="Delete" onclick="return alert('Are You sure?')"/>
+            </form>
+          </td>
+        </tr>
+  
+      </tbody>
+    </table>
+  

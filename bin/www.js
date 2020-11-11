@@ -1,22 +1,21 @@
+#!/usr/bin/env node
+
 /**
- * Perform environment and network-related configuration.
- * 
- * Separates aspects that change in different environments, e.g.:
+ * Start up in different environments
  *
  * - development
  * - test
  * - production
  *
- * 
- * @
+ * Use new ES6 syntax.
  */
 
 // Import dependencies ............................................
 
+const http = require('http');
 const dotenv = require('dotenv');
 const LOG = require('../util/logger');
 const app = require('../app');
-const http = require('http');
 
 // Helper functions defined first ...................................
 
@@ -85,6 +84,7 @@ const onError = (error) => {
  * Pass in (inject) the Express app
  */
 const server = http.createServer(app);
+
 /**
  * Event listener for HTTP server "listening" event.
  *
