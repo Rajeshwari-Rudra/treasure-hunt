@@ -1,4 +1,7 @@
-# treasure-hunt
+# The-Hunt
+“The Hunt game” is an outdoor collaborative game which allows the authorized users to play with other team members or to compete with other players in finding the hidden locations in a quest. We are designing this game in view that this is compatible with iPhone SE, Laptop, Tablet, and Android phones.
+
+A first time user has to register in order to become a player in the game with the Open Authorization. After the user creates an account he can login into the account. The player will have options either to join a team or to create a team. In order to join a team an invitation will be sent to the users via mail. The invitation will be automatic rejection if the user does not respond to it within three days. A user can create a quest containing number of locations that can be identified by means of latitudes and longitudes. A team containing players will compete to find the locations within specified time period. The team which identifies maximum number of locations within quest gains maximum number of points and will be the winner.
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/dabde95955984dd08493709c421c7da6)](https://app.codacy.com/organizations/gh/Rajeshwari-Rudra/dashboard)
 
@@ -82,6 +85,20 @@ Add yourself and email as the author (follow examples).
 ### Step 1 - Get fresh code.
 
 1. Pull fresh code. (Fork & clone if this is the first time.)
+
+#### Steps for cloning repository using command line
+
+- On GitHub, navigate to the main page of the repository
+- Click "Code" on main page repository which is above the list of files.
+- Here we can clone using HTTPS and SSH.Click the respective tabs and copy the URL provided.
+- Now open Git Bash.(necessary tools should be installed)
+- Change the current working directory to the location where we want the cloned directory.
+- Type "git clone", and then paste the URL copied earlier.
+- Press "Enter" to create your local clone.
+
+##### Note:
+- We can also clone the repository using github desktop.
+
 1. Run npm install
 1. Run npm run start
 1. Verify everything runs.
@@ -160,6 +177,7 @@ Heroku website is responding correctly with a default page.
 ### References
 
 - [Dr.DeniseCase](https://github.com/denisecase/web-app-2020-fall)
+- [Main repo](https://github.com/Krishna-Koyyalamudi/The-Hunt)
 - [Express API with Postgres](https://www.smashingmagazine.com/2020/04/express-api-backend-project-postgresql/)
 - [See repo](https://github.com/chidimo/Express-API-Template)
 - [Getting Started with Sequelize and Postgres](https://dev.to/nedsoft/getting-started-with-sequelize-and-postgres-emp)
@@ -169,6 +187,7 @@ Heroku website is responding correctly with a default page.
 - [MDN Guide to Publishing with Heroku](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/deployment)
 - [Provising Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql#provisioning-heroku-postgres)
 
+
 ### Team Members
 
 #### Boddu Nooka Raju :- Team Leader
@@ -177,3 +196,9 @@ Heroku website is responding correctly with a default page.
 #### Puneeth Annam :- Back-end Developer
 #### Rajeshwari Rudravaram :- Database Administrator
 
+### Reminders
+- No spaces in folders and file names.
+- Don't work on stale code - ALWAYS pull first
+- Don't work on your desktop - organize your repos either by class or under a common folder (e.g., github or other).
+- Deploy as you work - if everything passes tests, we want to add / commit / push and deploy frequently (several times a week). We should see your app develop throughout the sprint.
+- Do hard things early. Do not delay figuring out the hard questions.
