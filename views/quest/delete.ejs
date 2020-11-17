@@ -1,0 +1,105 @@
+@delete.ejs
+ *
+ *
+ * 
+ */
+
+ <head>
+
+  <title>Quest details/index</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style>
+      .card {
+          background-color: #e5e5e5;
+          border-radius: 15px;
+      }
+      .container .btn.btn-primary {
+          border-radius: 7px;
+          padding: 3px 45px;
+      }
+      textarea:hover,
+      input:hover,
+      textarea:active,
+      input:active,
+      textarea:focus,
+      input:focus,
+      button:focus,
+      button:active,
+      button:hover,
+      label:focus,
+      .btn:active,
+      .btn.active {
+          outline: 0px !important;
+          -webkit-appearance: none !important;
+          box-shadow: none !important;
+          border-color: #10533f !important;
+      }
+      .btn-primary,
+      .btn-primary:hover,
+      .btn-primary:focus,
+      .btn-primary:active,
+      .btn-primary:visited {
+          background-color: #10533f !important;
+          border-color: #10533f !important;
+          outline: none !important;
+          border: none !important;
+      }
+      
+      .card h2{
+    color: #0e532b;
+    padding: 15px
+  }
+  .btn.btn-default{
+      color: #10533f;
+  }
+  </style>
+  </head>
+  <body>
+  <br>
+  <body class="container">
+      <div class="card">
+
+          <div class="card-body">
+              <h2>Quest 1</h2>
+              <div class="card-body"><div>Location:<span class="Location"></span></div>
+
+                  <div>Creator: <span class="Creator"></span></div>
+                  <br>
+                  <div class="d-flex justify-content-center">
+
+                     <button href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Delete</button>
+                  </div>
+                  <!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      
+      <div class="modal-body">
+        <p>Are you sure you want to delete?</p>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Yes</button>
+
+        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+              </div>
+          </div>
+      </div>
+      <br>
+              <div class="d-flex justify-content-center">
+                  <button href="#" class="btn btn-primary">Cancel</button>
+              </div>
+</body>
