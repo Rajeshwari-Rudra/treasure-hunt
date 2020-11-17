@@ -1,0 +1,85 @@
+/** * @create.ejs */
+
+<head>
+    <script type="text/javascript" src="quest.js"></script>
+    <script>
+        let clueId = 0;
+        function addNewClue() {
+            alert('Adding New clue');
+            if (clueId < 3) {
+                var addList = document.getElementById('clue-list');
+                var docstyle = addList.style.display;
+                if (docstyle == 'none') addList.style.display = '';
+                clueId++;
+                var text = document.createElement('div');
+                text.id = 'additem_' + clueId;
+                text.innerHTML = `<div class="md-form"><input type="text" id="clue${clueId}" class="form-control"><label for="${clueId}">Clue${clueId + 1}</label></div>`
+                addList.appendChild(text);
+            }
+        }
+        function create() {
+            alert('quest created ');
+            $('#createForm').action('create');
+        }
+    </script>
+</head>
+<form id="createForm">
+    <div class="container-fluid">
+        <div class=row>
+            <div class="col-md-4 offset-md-4 mb-5">
+                <div class="md-form">
+                    <input type="text" id="form1" class="form-control">
+                    <label for="form1">Unique Quest Name</label>
+                </div>
+
+                <div class="border p-2">
+                    <h5>Start Location</h5>
+                    <div class="md-form">
+                        <input type="text" id="form2" class="form-control">
+                        <label for="form2">Latitude</label>
+                    </div>
+                    <div class="md-form">
+                        <input type="text" id="form3" class="form-control">
+                        <label for="form3">Longitude</label>
+                    </div>
+                </div>
+
+
+                <div class="border p-2 mt-3" id="quest-list">
+                    <h5>Quest Location 1</h5>
+                    <div class="md-form">
+                        <input type="text" id="form2" class="form-control">
+                        <label for="form2">Latitude</label>
+                    </div>
+                    <div class="md-form">
+                        <input type="text" id="form3" class="form-control">
+                        <label for="form3">Longitude</label>
+                    </div>
+
+
+                    <div id="clue-list">
+                        <div class="md-form">
+                            <input type="text" id="clue0" class="form-control">
+                            <label for="clue0">Clue1</label>
+                        </div>
+
+                    </div>
+                    <small class="text-success" style="cursor: pointer;" onclick="addNewClue()"><i class="fa fa-plus"
+                            aria-hidden="true"></i>
+                        <span class="ml-1">Add New Clue</span>
+                    </small>
+                </div>
+
+                <div style="display: grid; justify-content: center;">
+                    <p class="mt-3 text-success" onclick="addNewQuest()">
+                        <i class="fa fa-plus mr-1" aria-hidden="true"></i>Add New Quest Location
+                    </p>
+                    <button style="background-color: #00674c; color: #ffffff;" type="button" class="btn" onclick="create()">Create</button>
+
+                </div>
+            </div>
+            </nav>
+        </div>
+    </div>
+
+</form>
