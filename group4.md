@@ -1,7 +1,7 @@
 # Group 4
 
 
-## Members
+## Team Members
 
 - Rajeshwari Rudravaram <s538361@nwmissouri.edu>
 - BN Raju
