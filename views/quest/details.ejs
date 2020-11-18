@@ -5,3 +5,34 @@
 *
 * @author Rajeshwari Rudravaram <s538361@nwmissouri.edu>
 -->
+
+<% if (quest.error) { %>
+    <div class="alert alert-danger" role="alert"><%- quest.error %></div>
+    <% } %>
+    
+    <div class="card-body">
+    
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">IsCartoon</th>
+            <th >Action</th>
+          </tr>
+        </thead>
+        <tbody>
+    
+          <tr>
+            <th scope="row"><%= quest.id %></th>
+            <td><%= quest.name%></td>
+            <td><%= quest.age%></td>
+            <td><%= quest.isCartoon%></td>
+            <td>
+              <a class="btn btn-success edit" href="/quest">Done</a>
+            </td>
+          </tr>
+    
+        </tbody>
+      </table>
