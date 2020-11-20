@@ -64,74 +64,74 @@ try {
   LOG.error(`ERROR: ${err.message}`);
 }
 
-// Dr. Hoot - tea
-app.use('/tea', require('./routes/tea.routes'));
+// // Dr. Hoot - tea
+// app.use('/tea', require('./routes/tea.routes'));
 
-// Blake - game
-try {
-  app.use('/game', require('./routes/game.routes'));
-} catch (err) {
-  LOG.error(`ERROR: ${err.message}`);
-}
+// // Blake - game
+// try {
+//   app.use('/game', require('./routes/game.routes'));
+// } catch (err) {
+//   LOG.error(`ERROR: ${err.message}`);
+// }
 
-// Varsha - animal
-app.use('/animal', require('./routes/animal.routes'));
+// // Varsha - animal
+// app.use('/animal', require('./routes/animal.routes'));
 
-// Felipe - ?
+// // Felipe - ?
 
-// Jack - chief
+// // Jack - chief
 
-// Sreenidhi - plant
-app.use('/plant', require('./routes/plant.routes'));
+// // Sreenidhi - plant
+// app.use('/plant', require('./routes/plant.routes'));
 
-// Sri Vasavi - food
-app.use('/food', require('./routes/food.routes'));
-// Joseph - software
-app.use('/software', require('./routes/software.routes'));
-// Stephen - whiskey
-try {
-  app.use('/whiskey', require('./routes/whiskey.routes'));
-} catch (err) {
-  LOG.error(`ERROR: ${err.message}`);
-}
+// // Sri Vasavi - food
+// app.use('/food', require('./routes/food.routes'));
+// // Joseph - software
+// app.use('/software', require('./routes/software.routes'));
+// // Stephen - whiskey
+// try {
+//   app.use('/whiskey', require('./routes/whiskey.routes'));
+// } catch (err) {
+//   LOG.error(`ERROR: ${err.message}`);
+// }
 
-// Shivani - book
-app.use('/book', require('./routes/book.routes'));
+// // Shivani - book
+// app.use('/book', require('./routes/book.routes'));
 
-// Kunal - videoGame
-try {
-  app.use('/videogame', require('./routes/videogame.routes'));
-} catch (err) {
-  LOG.error(`ERROR: ${err.message}`);
-}
-// Chandler - company
-app.use('/company', require('./routes/company.routes'));
+// // Kunal - videoGame
+// try {
+//   app.use('/videogame', require('./routes/videogame.routes'));
+// } catch (err) {
+//   LOG.error(`ERROR: ${err.message}`);
+// }
+// // Chandler - company
+// app.use('/company', require('./routes/company.routes'));
 
-// Praneeth - cricket
-app.use('/cricket', require('./routes/cricket.routes'));
-// Nithya - series
-app.use('/series', require('./routes/series.routes'));
+// // Praneeth - cricket
+// app.use('/cricket', require('./routes/cricket.routes'));
+// // Nithya - series
+// app.use('/series', require('./routes/series.routes'));
 
-// Zach - fruit
-try {
-  app.use('/fruit', require('./routes/fruit.routes'));
-} catch (err) {
-  LOG.error(`ERROR: ${err.message}`);
-}
+// // Zach - fruit
+// try {
+//   app.use('/fruit', require('./routes/fruit.routes'));
+// } catch (err) {
+//   LOG.error(`ERROR: ${err.message}`);
+// }
 
-// Sam - ship
-try {
-  app.use('/ship', require('./routes/ship.routes'));
-} catch (err) {
-  LOG.error(`ERROR: ${err.message}`);
-}
+// // Sam - ship
+// try {
+//   app.use('/ship', require('./routes/ship.routes'));
+// } catch (err) {
+//   LOG.error(`ERROR: ${err.message}`);
+// }
 
-// Prashansa - dance
-try {
-  app.use('/dance', require('./routes/dance.routes'));
-} catch (err) {
-  LOG.error(`ERROR: ${err.message}`);
-}
+// // Prashansa - dance
+// try {
+//   app.use('/dance', require('./routes/dance.routes'));
+// } catch (err) {
+//   LOG.error(`ERROR: ${err.message}`);
+//}
 
 LOG.info('app custom routes configured');
 

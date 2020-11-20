@@ -59,41 +59,41 @@ module.exports = async () => {
 
     LOG.info('Start reading all model definitions.');
 
-    // Dr. Case - rabbit
+    // Dr. Case - team
     require('./team')(db, DataTypes);
 
     // Dr. Hoot - tea
-    require('./tea')(db, DataTypes);
+    // require('./tea')(db, DataTypes);
 
-    // Blake - game
-    require('./game')(db, DataTypes);
-    // Varsha - animal
-    require('./animal')(db, DataTypes);
-    // Felipe - ?
+    // // Blake - game
+    // require('./game')(db, DataTypes);
+    // // Varsha - animal
+    // require('./animal')(db, DataTypes);
+    // // Felipe - ?
 
     // Jack - chief
 
     // Sreenidhi - plant
 
-    // Sri Vasavi - food
-    require('./food')(db, DataTypes);
-    // Joseph - software
-    require('./software')(db, DataTypes);
-    // Stephen - whiskey
-    require('./whiskey')(db, DataTypes);
-    // Shivani - book
+    // // Sri Vasavi - food
+    // require('./food')(db, DataTypes);
+    // // Joseph - software
+    // require('./software')(db, DataTypes);
+    // // Stephen - whiskey
+    // require('./whiskey')(db, DataTypes);
+    // // Shivani - book
 
-    // Kunal - videoGame
-    require('./videogame')(db, DataTypes);
-    // Chandler - company
+    // // Kunal - videoGame
+    // require('./videogame')(db, DataTypes);
+    // // Chandler - company
 
-    // Praneeth - cricket
-    require('./cricket')(db, DataTypes);
-    // Nithya - series
-    require('./series')(db, DataTypes);
+    // // Praneeth - cricket
+    // require('./cricket')(db, DataTypes);
+    // // Nithya - series
+    // require('./series')(db, DataTypes);
 
-    // Zach - fruit
-    require('./fruit')(db, DataTypes);
+    // // Zach - fruit
+    // require('./fruit')(db, DataTypes);
 
     // Prashansa - dance
 
