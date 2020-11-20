@@ -24,9 +24,9 @@ module.exports = async (db) => {
   try {
     await db.models.Team.bulkCreate(
       [
-        { name: 'Bugs', age: 2, isCartoon: true },
-        { name: 'Huggy', age: 2, isCartoon: false },
-        { name: 'Doc', age: 2, isCartoon: true },
+        { name: 'Bugs', age: 2, isCreated: true },
+        { name: 'Huggy', age: 2, isCreated: false },
+        { name: 'Doc', age: 2, isCreated: true },
       ],
       { validate: true }, // add options object to call new model validators
     );
