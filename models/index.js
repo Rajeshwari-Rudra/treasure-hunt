@@ -63,20 +63,20 @@ module.exports = async () => {
     require('./team')(db, DataTypes);
 
     // Rajeshwari Rudravaram - quest
-    require('./quest')(db, DataTypes);
+    // require('./quest')(db, DataTypes);
 
     // clue
-    require('./clue')(db, DataTypes);
+    // require('./clue')(db, DataTypes);
 
     // competiton
-    require('./competiton')(db, DataTypes);
+    // require('./competiton')(db, DataTypes);
     
     // player
-    require('./player')(db, DataTypes);
+    // require('./player')(db, DataTypes);
 
-    Jack - chief
+    // Jack - chief
 
-    Sreenidhi - plant
+    // Sreenidhi - plant
 
     // // Sri Vasavi - food
     // require('./food')(db, DataTypes);
