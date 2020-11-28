@@ -1,121 +1,71 @@
 /**
  *  Model index.js - adds all model definitions into sequelize
+ *  Updated process all files in the models folder
+ *  rather than explicitly calling require for each
  *
+ *  @author Denise Case <dcase@nwmissouri.edu>
  *
  */
+const dotenv = require('dotenv');
+const fs = require('fs');
+const path = require('path');
+const { Sequelize, DataTypes } = require('sequelize');
+
+const envConfigs = require('../config/config');
+const LOG = require('../util/logger');
+const applyExtraSetup = require('./index-setup'); // add associations
 
 module.exports = async () => {
-  const LOG = require('../util/logger');
   LOG.info('Starting models/index.js .......................');
-
-  /**
-   * Load environment variables from .env file,
-   *  where API keys and passwords can be configured.
-   */
-  const dotenv = require('dotenv');
-  const vars = dotenv.config({ path: '.env' });
-  if (vars.error) {
-    throw vars.error;
-  }
-  LOG.info(`Environment variables loaded: ${vars.parsed}`);
-
-  const { Sequelize, DataTypes } = require('sequelize');
-
-  /**
-   * Test a small query
-   */
-  async function testSmallQuery(sequelize) {
-    LOG.info('Before running small query');
-    const sql = 'SELECT 1 AS x';
-    try {
-      const records = await sequelize.query(sql, { raw: true });
-      LOG.info(
-        `After successfully running small query: ${JSON.stringify(
-          records[0],
-          null,
-          2,
-        )}.`,
-      );
-    } catch (err) {
-      LOG.info(`Error running small query: ${err.message}`);
-    }
-  }
-
-  async function main(db) {
-    LOG.info('Checking database connection...');
-
-    try {
-      await db.authenticate();
-      LOG.info('Database connection OK!');
-    } catch (err) {
-      LOG.info(`Unable to connect to the database: ${err.message}`);
-    }
-
-    try {
-      await testSmallQuery(db);
-    } catch (err) {
-      LOG.error(`Error setting app db: ${err.message}`);
-    }
-
-    LOG.info('Start reading all model definitions.');
-
-    // Dr. Case - team
-    require('./team')(db, DataTypes);
-
-    // Rajeshwari Rudravaram - quest
-    // require('./quest')(db, DataTypes);
-
-    // clue
-    // require('./clue')(db, DataTypes);
-
-    // competiton
-    // require('./competiton')(db, DataTypes);
-    
-    // player
-    // require('./player')(db, DataTypes);
-
-    // Jack - chief
-
-    // Sreenidhi - plant
-
-    // // Sri Vasavi - food
-    // require('./food')(db, DataTypes);
-    // // Joseph - software
-    // require('./software')(db, DataTypes);
-    // // Stephen - whiskey
-    // require('./whiskey')(db, DataTypes);
-    // // Shivani - book
-
-    // // Kunal - videoGame
-    // require('./videogame')(db, DataTypes);
-    // // Chandler - company
-
-    // // Praneeth - cricket
-    // require('./cricket')(db, DataTypes);
-    // // Nithya - series
-    // require('./series')(db, DataTypes);
-
-    // // Zach - fruit
-    // require('./fruit')(db, DataTypes);
-
-    // Prashansa - dance
-
-    // Sam - ship
-  }
 
   /**
    * Connect and initialize the database.
    */
   const dbInit = async () => {
+    /**
+     * Load environment variables from .env file,
+     *  where API keys and passwords can be configured.
+     */
+    const vars = dotenv.config({ path: '.env' });
+    if (vars.error) {
+      throw vars.error;
+    }
+    LOG.info(`MODELS/INDEX: Environment variables loaded: ${vars.parsed}`);
+
+    const basename = path.basename(__filename);
     const isProduction = process.env.NODE_ENV === 'production';
-    LOG.info(`Entering dbInit in ${process.env.NODE_ENV} environment.`);
-    const pgconfigs = require('../config/config');
-    const config = pgconfigs[process.env.NODE_ENV];
+    LOG.info(`MODELS/INDEX: In ${process.env.NODE_ENV} environment.`);
+
+    const config = envConfigs[process.env.NODE_ENV];
+
     const sequelize = isProduction
       ? new Sequelize(config.url, config)
       : new Sequelize(config);
-    await main(sequelize);
-    LOG.info('Done connecting and initializing...');
+
+    LOG.info('MODELS/INDEX: created Sequelize connection.');
+
+    fs.readdirSync(__dirname)
+      .filter((file) => {
+        return (
+          file.indexOf('.') !== 0 &&
+          file !== basename &&
+          file.slice(-3) === '.js'
+        );
+      })
+      .forEach((file) => {
+        // we like require statement to be explicit - and at the top
+        // of the file, but this is more concise, so for now at
+        // least we are breaking the rules
+        //
+        // require each model definer
+        require(path.join(__dirname, file))(sequelize, DataTypes);
+      });
+
+    LOG.info('MODELS/INDEX: Added model definers.');
+
+    // Apply extra setup after model definition (e.g. associations).
+    await applyExtraSetup(sequelize);
+
     return sequelize;
   };
 

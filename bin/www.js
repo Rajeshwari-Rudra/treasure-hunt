@@ -16,6 +16,8 @@ const http = require('http');
 const dotenv = require('dotenv');
 const LOG = require('../util/logger');
 const app = require('../app');
+const dbContext = require('../models/index');
+const seeder = require('../util/seeder');
 
 // Helper functions defined first ...................................
 
@@ -90,11 +92,11 @@ const server = http.createServer(app);
  *
  * When we start listening:
  *  - initialize the database
- */
+  */
 const onListening = async () => {
   try {
-    const db = await require('../models/index')();
-    await require('../util/seeder')(db);
+    const db = await dbContext();
+    await seeder(db);
   } catch (err) {
     LOG.error(`ERROR with database:${err.message}`);
   }
